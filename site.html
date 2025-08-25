@@ -1,0 +1,1975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Zensation Aesthetics - Miami's Premier Medical Spa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #d4a574;
+            --primary-dark: #b8935f;
+            --secondary: #2c3e50;
+            --accent: #e8f4f8;
+            --text: #333;
+            --light: #f8f9fa;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background: var(--primary);
+            color: var(--white);
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            background: var(--white);
+            padding: 15px 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .cta-button {
+            background: var(--primary);
+            color: var(--white);
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 165, 116, 0.3);
+        }
+
+        /* Hero Video Section */
+        .hero-video {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            overflow: hidden;
+            margin-top: 0;
+        }
+
+        .video-hero-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-hero-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .placeholder-content {
+            text-align: center;
+            color: white;
+        }
+
+        .placeholder-text {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        .placeholder-subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, 
+                rgba(0,0,0,0.7) 0%, 
+                rgba(0,0,0,0.3) 50%, 
+                rgba(0,0,0,0.7) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .hero-video-content {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-size: 64px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            line-height: 1.1;
+        }
+
+        .hero-title .highlight {
+            color: var(--primary);
+            font-style: italic;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .primary-cta {
+            background: var(--primary);
+            padding: 15px 35px;
+            border-radius: 50px;
+            display: inline-block;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
+        }
+
+        .primary-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 165, 116, 0.4);
+            background: var(--primary-dark);
+        }
+
+        .primary-cta span {
+            display: block;
+            font-size: 18px;
+        }
+
+        .primary-cta small {
+            display: block;
+            font-size: 12px;
+            opacity: 0.9;
+            font-weight: normal;
+        }
+
+        .secondary-cta {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 15px 35px;
+            border-radius: 50px;
+            display: inline-block;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .secondary-cta:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .secondary-cta span {
+            display: block;
+            font-size: 18px;
+        }
+
+        .secondary-cta small {
+            display: block;
+            font-size: 12px;
+            opacity: 0.9;
+            font-weight: normal;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        .trust-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            z-index: 3;
+        }
+
+        .trust-items {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .trust-item {
+            text-align: center;
+            color: white;
+        }
+
+        .trust-item strong {
+            display: block;
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .trust-item span {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        /* Header Update for Overlay */
+        header {
+            background: transparent;
+            position: absolute;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background: rgba(212, 165, 116, 0.9);
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Remove old hero and video sections styles */
+        .hero {
+            display: none;
+        }
+
+        .video-experience {
+            display: none;
+        }
+
+        .play-button-large {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: var(--primary);
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 0 auto 20px;
+        }
+
+        .play-button-large:hover {
+            transform: scale(1.1);
+            background: white;
+        }
+
+        /* Floating Chat Button */
+        .floating-chat-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50px;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            z-index: 9998;
+            transition: all 0.3s;
+            animation: slideInUp 0.5s ease-out;
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .floating-chat-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .chat-button-icon {
+            font-size: 24px;
+        }
+
+        .chat-button-text {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .chat-notification {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ff4444;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Chat Widget */
+        .chat-widget {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 380px;
+            height: 500px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            z-index: 9999;
+            display: none;
+            flex-direction: column;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        .chat-widget.active {
+            display: flex;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .chat-widget-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 20px 20px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-header-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .chat-status-indicator {
+            width: 10px;
+            height: 10px;
+            background: #4ade80;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .chat-header-title {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .chat-header-subtitle {
+            font-size: 12px;
+            opacity: 0.9;
+            margin-top: 2px;
+        }
+
+        .chat-close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+
+        .chat-close-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .chat-widget-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+
+        .chat-widget-messages .message {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .chat-widget-messages .message.bot {
+            flex-direction: row;
+        }
+
+        .chat-widget-messages .message.user {
+            flex-direction: row-reverse;
+        }
+
+        .chat-widget-messages .message-avatar {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .chat-widget-messages .message.user .message-avatar {
+            background: var(--primary);
+        }
+
+        .chat-widget-messages .message-content {
+            background: white;
+            padding: 12px 16px;
+            border-radius: 18px;
+            max-width: 70%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .chat-widget-messages .message.user .message-content {
+            background: var(--primary);
+            color: white;
+        }
+
+        .chat-widget-input {
+            padding: 15px;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            gap: 10px;
+            background: white;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .chat-widget-input input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 25px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .chat-widget-input input:focus {
+            border-color: #667eea;
+        }
+
+        .chat-widget-input button {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .chat-widget-input button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hide the old Virtual Assistant section */
+        #virtual {
+            display: none;
+        }
+
+        /* Chat Tabs */
+        .chat-tabs {
+            display: flex;
+            background: #f3f4f6;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .chat-tab {
+            flex: 1;
+            padding: 12px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #6b7280;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: all 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+
+        .chat-tab:hover {
+            background: #f9fafb;
+        }
+
+        .chat-tab.active {
+            color: #667eea;
+            background: white;
+            border-bottom-color: #667eea;
+        }
+
+        .chat-tab span {
+            font-size: 16px;
+        }
+
+        /* Tab Content */
+        .chat-tab-content {
+            display: none;
+            flex-direction: column;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .chat-tab-content.active {
+            display: flex;
+        }
+
+        /* Assessment Tab Styles */
+        .assessment-container {
+            padding: 20px;
+            overflow-y: auto;
+            flex: 1;
+            background: #f8f9fa;
+        }
+
+        .assessment-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .assessment-header h3 {
+            color: var(--secondary);
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .assessment-header p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .upload-area {
+            background: white;
+            border: 2px dashed #cbd5e1;
+            border-radius: 15px;
+            padding: 40px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .upload-area:hover {
+            border-color: #667eea;
+            background: #f0f4ff;
+        }
+
+        .upload-area.dragover {
+            border-color: #667eea;
+            background: #f0f4ff;
+            transform: scale(1.02);
+        }
+
+        .upload-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .upload-text strong {
+            display: block;
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+
+        .upload-text small {
+            color: #6b7280;
+            font-size: 12px;
+        }
+
+        .assessment-features {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        .feature-icon {
+            width: 20px;
+            height: 20px;
+            background: #10b981;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        .assessment-results {
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .assessment-results h4 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .results-content {
+            margin-bottom: 20px;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        .results-content .result-item {
+            padding: 12px;
+            background: #f0f4ff;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 3px solid #667eea;
+        }
+
+        .results-content .result-title {
+            font-weight: bold;
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+
+        .results-content .result-description {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        /* Update existing chat widget messages style */
+        .chat-widget-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+
+        /* Mobile responsiveness for chat */
+        @media (max-width: 768px) {
+            .chat-widget {
+                width: calc(100% - 20px);
+                right: 10px;
+                left: 10px;
+                bottom: 80px;
+                height: 70vh;
+                max-height: 500px;
+            }
+
+            .floating-chat-button {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        /* AI Section */
+        .ai-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .ai-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .ai-feature {
+            text-align: center;
+            padding: 30px;
+            background: var(--light);
+            border-radius: 15px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .ai-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: var(--white);
+        }
+
+        .ai-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: var(--gradient);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 24px;
+        }
+
+        .ai-feature h3 {
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        /* Chat Demo */
+        .chat-demo {
+            background: var(--light);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .chat-header {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 15px;
+            border-radius: 10px 10px 0 0;
+            margin: -30px -30px 20px -30px;
+            text-align: center;
+        }
+
+        .chat-messages {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: var(--white);
+            border-radius: 10px;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { 
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .message.bot {
+            flex-direction: row;
+        }
+
+        .message.user {
+            flex-direction: row-reverse;
+        }
+
+        .message-avatar {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        .message.user .message-avatar {
+            background: var(--primary);
+        }
+
+        .message-content {
+            background: var(--light);
+            padding: 10px 15px;
+            border-radius: 15px;
+            max-width: 70%;
+        }
+
+        .message.user .message-content {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .chat-input {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+        }
+
+        .chat-input button {
+            background: var(--gradient);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .chat-input button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Services */
+        .services {
+            padding: 80px 0;
+            background: var(--accent);
+        }
+
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .service-image {
+            height: 200px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 48px;
+        }
+
+        .service-content {
+            padding: 25px;
+        }
+
+        .service-content h3 {
+            margin-bottom: 15px;
+            color: var(--secondary);
+            font-size: 22px;
+        }
+
+        .service-content p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .service-price {
+            font-size: 24px;
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .stars {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--secondary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 50px 0 20px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .footer-section p, .footer-section li {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.7;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .trust-items {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .message-content {
+                max-width: 85%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <span>📞 (305) 555-0123 | 📍 2103 Coral Way, Suite 605, Miami</span>
+                <span>⭐ 5.0 Rating | 500+ Happy Clients</span>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <a href="#" class="logo">Beauty Zensation</a>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="#" class="cta-button" onclick="showBooking()">Book Consultation</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Floating Chat Button -->
+    <div class="floating-chat-button" id="floatingChatButton" onclick="toggleChat()">
+        <div class="chat-button-icon">💬</div>
+        <span class="chat-button-text">Chat Now</span>
+        <div class="chat-notification" id="chatNotification">1</div>
+    </div>
+
+    <!-- Floating Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-widget-header">
+            <div class="chat-header-info">
+                <div class="chat-status-indicator"></div>
+                <div>
+                    <div class="chat-header-title">Virtual Beauty Consultant</div>
+                    <div class="chat-header-subtitle">Online - Typically replies instantly</div>
+                </div>
+            </div>
+            <button class="chat-close-btn" onclick="toggleChat()">×</button>
+        </div>
+        
+        <!-- Tab Navigation -->
+        <div class="chat-tabs">
+            <button class="chat-tab active" id="chatTab" onclick="switchTab('chat')">
+                <span>💬</span> Chat
+            </button>
+            <button class="chat-tab" id="assessmentTab" onclick="switchTab('assessment')">
+                <span>📸</span> Assessment
+            </button>
+        </div>
+        
+        <!-- Chat Tab Content -->
+        <div class="chat-tab-content active" id="chatContent">
+            <div class="chat-widget-messages" id="chatWidgetMessages">
+                <div class="message bot">
+                    <div class="message-avatar">BZ</div>
+                    <div class="message-content">
+                        Hello! I'm your Virtual Beauty Consultant. I can help you with scheduling and any questions you may have!
+                    </div>
+                </div>
+                <div class="message bot">
+                    <div class="message-avatar">BZ</div>
+                    <div class="message-content">
+                        💡 Click the "Assessment" tab above for your FREE virtual beauty analysis!
+                    </div>
+                </div>
+            </div>
+            <div class="chat-widget-input">
+                <input type="text" id="chatWidgetInput" placeholder="Ask about treatments, pricing, or scheduling..." onkeypress="handleChatKeyPress(event)">
+                <button onclick="sendChatMessage()">Send</button>
+            </div>
+        </div>
+        
+        <!-- Assessment Tab Content -->
+        <div class="chat-tab-content" id="assessmentContent">
+            <div class="assessment-container">
+                <div class="assessment-header">
+                    <h3>Free Virtual Beauty Assessment</h3>
+                    <p>Upload a photo for personalized treatment recommendations</p>
+                </div>
+                
+                <div class="upload-area" id="uploadArea" onclick="document.getElementById('photoUpload').click()">
+                    <div class="upload-icon">📷</div>
+                    <div class="upload-text">
+                        <strong>Click to upload photo</strong>
+                        <small>or drag and drop</small>
+                    </div>
+                    <input type="file" id="photoUpload" accept="image/*" style="display: none;" onchange="handlePhotoUpload(event)">
+                </div>
+                
+                <div class="assessment-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <span>100% Private & Secure</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <span>Instant AI Analysis</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <span>Personalized Plan</span>
+                    </div>
+                </div>
+                
+                <div class="assessment-results" id="assessmentResults" style="display: none;">
+                    <h4>Your Personalized Recommendations:</h4>
+                    <div class="results-content" id="resultsContent"></div>
+                    <button class="cta-button" onclick="showBooking()">Book Free Consultation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Video Section -->
+    <section class="hero-video">
+        <div class="video-hero-container">
+            <!-- Multiple video sources for better compatibility -->
+            <video autoplay muted loop playsinline id="heroVideo" style="width: 100%; height: 100%; object-fit: cover;">
+                <source src="./video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-placeholder" id="videoPlaceholder">
+                <div class="placeholder-content">
+                    <div class="placeholder-text">Beauty Zensation</div>
+                    <div class="placeholder-subtitle">Your transformation journey starts here</div>
+                    <div class="play-button-large" onclick="playVideos()" style="margin-top: 30px;">
+                        <span>▶</span>
+                    </div>
+                    <small style="opacity: 0.8;">Click to play video</small>
+                </div>
+            </div>
+            <div class="hero-overlay">
+                <div class="container">
+                    <div class="hero-video-content">
+                        <h1 class="hero-title">Welcome to <span class="highlight">Beauty Zensation</span></h1>
+                        <p class="hero-subtitle">Where Science Meets Beauty</p>
+                        <div class="hero-buttons">
+                            <a href="#" class="cta-button primary-cta" onclick="showBooking()">
+                                <span>Start Your Journey</span>
+                                <small>Free Consultation</small>
+                            </a>
+                            <a href="#services" class="cta-button secondary-cta">
+                                <span>View Services</span>
+                                <small>Explore Treatments</small>
+                            </a>
+                        </div>
+                        <div class="scroll-indicator">
+                            <span>↓</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="trust-bar">
+                <div class="container">
+                    <div class="trust-items">
+                        <div class="trust-item">
+                            <strong>500+</strong>
+                            <span>Happy Clients</span>
+                        </div>
+                        <div class="trust-item">
+                            <strong>5.0★</strong>
+                            <span>Google Rating</span>
+                        </div>
+                        <div class="trust-item">
+                            <strong>FDA</strong>
+                            <span>Approved Treatments</span>
+                        </div>
+                        <div class="trust-item">
+                            <strong>0%</strong>
+                            <span>Financing Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Treatment Menu</h2>
+                <p>Advanced medical aesthetics tailored to enhance your natural beauty</p>
+            </div>
+
+            <div class="service-cards">
+                <!-- Body Contouring -->
+                <div class="service-card" onclick="showServiceDetail('contouring')">
+                    <div class="service-image">✨</div>
+                    <div class="service-content">
+                        <h3>Body Contouring</h3>
+                        <p>Non-surgical body sculpting combining Cryolipolysis (fat freezing), Ultrasonic Cavitation, and Radio Frequency skin tightening. Target stubborn areas: abdomen, flanks, arms, back, thighs, and double chin.</p>
+                        <ul style="text-align: left; padding-left: 20px; color: #666; font-size: 14px; margin: 10px 0;">
+                            <li>No downtime or surgery</li>
+                            <li>Visible results in 2-3 sessions</li>
+                            <li>FDA-cleared technology</li>
+                        </ul>
+                        <div class="service-price">From $399/session</div>
+                        <a href="#" class="cta-button" style="width: 100%; text-align: center;">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Neurotoxins -->
+                <div class="service-card" onclick="showServiceDetail('botox')">
+                    <div class="service-image">💉</div>
+                    <div class="service-content">
+                        <h3>Toxin Injections</h3>
+                        <p>Smooth wrinkles and prevent fine lines with expertly placed Botox®, Dysport®, or Xeomin®. Also treats excessive sweating, migraines, TMJ, and neck bands.</p>
+                        <ul style="text-align: left; padding-left: 20px; color: #666; font-size: 14px; margin: 10px 0;">
+                            <li>Results in 3-7 days</li>
+                            <li>Lasts 3-4 months</li>
+                            <li>Natural-looking results</li>
+                        </ul>
+                        <div class="service-price">$12/unit Botox</div>
+                        <a href="#" class="cta-button" style="width: 100%; text-align: center;">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Semaglutide -->
+                <div class="service-card" onclick="showServiceDetail('semaglutide')">
+                    <div class="service-image">🎯</div>
+                    <div class="service-content">
+                        <h3>Medical Weight Loss</h3>
+                        <p>FDA-approved Semaglutide combined with B12 for energy and L-Carnitine for enhanced fat burning. Weekly injections with comprehensive support.</p>
+                        <ul style="text-align: left; padding-left: 20px; color: #666; font-size: 14px; margin: 10px 0;">
+                            <li>Lose 15-20% body weight</li>
+                            <li>Reduces appetite naturally</li>
+                            <li>Includes virtual monitoring</li>
+                        </ul>
+                        <div class="service-price">From $399/month</div>
+                        <a href="#" class="cta-button" style="width: 100%; text-align: center;">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Dermal Fillers -->
+                <div class="service-card" onclick="showServiceDetail('fillers')">
+                    <div class="service-image">💋</div>
+                    <div class="service-content">
+                        <h3>Dermal Fillers</h3>
+                        <p>Restore volume, enhance lips, and sculpt facial contours with Juvederm®, Restylane®, and RHA® collections. Instant, natural-looking results.</p>
+                        <ul style="text-align: left; padding-left: 20px; color: #666; font-size: 14px; margin: 10px 0;">
+                            <li>Immediate results</li>
+                            <li>Lasts 6-18 months</li>
+                            <li>Reversible if needed</li>
+                        </ul>
+                        <div class="service-price">From $650/syringe</div>
+                        <a href="#" class="cta-button" style="width: 100%; text-align: center;">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Vitamin Injections -->
+                <div class="service-card" onclick="showServiceDetail('vitamins')">
+                    <div class="service-image">⚡</div>
+                    <div class="service-content">
+                        <h3>Vitamin Injections</h3>
+                        <p>Boost energy, metabolism, and immunity with our vitamin injection menu including B12, Vitamin D, Biotin, and our signature beauty blend.</p>
+                        <ul style="text-align: left; padding-left: 20px; color: #666; font-size: 14px; margin: 10px 0;">
+                            <li>Instant energy boost</li>
+                            <li>Improved metabolism</li>
+                            <li>Enhanced immunity</li>
+                        </ul>
+                        <div class="service-price">From $35/injection</div>
+                        <a href="#" class="cta-button" style="width: 100%; text-align: center;">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- IV Therapy -->
+                <div class="service-card" onclick="showServiceDetail('iv')">
+                    <div class="service-image">💧</div>
+                    <div class="service-content">
+                        <h3>IV Hydration Therapy</h3>
+                        <p>Rapid hydration and nutrient delivery with our custom IV drips: Myers Cocktail, NAD+, Glutathione, and specialized recovery blends.</p>
+                        <ul style="text-align: left; padding-left: 20px; color: #666; font-size: 14px; margin: 10px 0;">
+                            <li>45-minute treatment</li>
+                            <li>100% absorption</li>
+                            <li>Immediate benefits</li>
+                        </ul>
+                        <div class="service-price">From $150/drip</div>
+                        <a href="#" class="cta-button" style="width: 100%; text-align: center;">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Packages -->
+            <div style="margin-top: 60px; padding: 40px; background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%); border-radius: 20px; text-align: center;">
+                <h3 style="color: var(--secondary); margin-bottom: 20px;">✨ New Client Special ✨</h3>
+                <p style="font-size: 18px; margin-bottom: 20px;">Get 20% off your first treatment + FREE virtual consultation</p>
+                <a href="#" class="cta-button" onclick="showBooking()">Claim Your Offer</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Real Results, Real Stories</h2>
+                <p>See what our clients are saying about their transformations</p>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The virtual consultation saved me so much time! I got all my questions answered before coming in. The body contouring results are amazing!"</p>
+                    <div class="testimonial-author">Maria G. - Coral Gables</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Professional, clean, and the staff is incredibly knowledgeable. The virtual assistant helped me choose the perfect treatment plan. Down 3 dress sizes!"</p>
+                    <div class="testimonial-author">Jennifer R. - Brickell</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The Semaglutide program changed my life. The virtual check-ins keep me accountable. I've lost 40 pounds and feel amazing!"</p>
+                    <div class="testimonial-author">Robert K. - Aventura</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Beauty Zensation</h3>
+                    <p>Miami's premier medical aesthetics clinic combining cutting-edge treatments with AI technology for exceptional results.</p>
+                    <p><strong>Follow Us:</strong><br>
+                    Instagram | Facebook | TikTok</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Virtual Consultations</a></li>
+                        <li><a href="#">Before & After</a></li>
+                        <li><a href="#">Financing Options</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Botox & Fillers</a></li>
+                        <li><a href="#">Body Contouring</a></li>
+                        <li><a href="#">Weight Management</a></li>
+                        <li><a href="#">Skin Rejuvenation</a></li>
+                        <li><a href="#">IV Therapy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><strong>Location:</strong><br>
+                    2103 Coral Way, Suite 605<br>
+                    Miami, FL 33145</p>
+                    <p><strong>Hours:</strong><br>
+                    Mon-Fri: 9AM - 7PM<br>
+                    Sat: 10AM - 5PM<br>
+                    Sun: Closed</p>
+                    <p><strong>Phone:</strong> (305) 555-0123</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Beauty Zensation Aesthetics. All rights reserved. | Privacy Policy | Terms of Service | HIPAA Compliance</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Chat Widget Functionality
+        let chatOpen = false;
+        let currentTab = 'chat';
+
+        function toggleChat() {
+            const widget = document.getElementById('chatWidget');
+            const button = document.getElementById('floatingChatButton');
+            const notification = document.getElementById('chatNotification');
+            
+            chatOpen = !chatOpen;
+            
+            if (chatOpen) {
+                widget.classList.add('active');
+                button.style.transform = 'scale(0.9)';
+                if (notification) {
+                    notification.style.display = 'none';
+                }
+                // Focus input when opened (only if chat tab is active)
+                if (currentTab === 'chat') {
+                    setTimeout(() => {
+                        document.getElementById('chatWidgetInput').focus();
+                    }, 300);
+                }
+            } else {
+                widget.classList.remove('active');
+                button.style.transform = 'scale(1)';
+            }
+        }
+
+        function switchTab(tab) {
+            currentTab = tab;
+            
+            // Update tab buttons
+            document.getElementById('chatTab').classList.toggle('active', tab === 'chat');
+            document.getElementById('assessmentTab').classList.toggle('active', tab === 'assessment');
+            
+            // Update tab content
+            document.getElementById('chatContent').classList.toggle('active', tab === 'chat');
+            document.getElementById('assessmentContent').classList.toggle('active', tab === 'assessment');
+            
+            // Focus input if switching to chat
+            if (tab === 'chat') {
+                setTimeout(() => {
+                    document.getElementById('chatWidgetInput').focus();
+                }, 100);
+            }
+        }
+
+        function handlePhotoUpload(event) {
+            const file = event.target.files[0];
+            if (file && file.type.startsWith('image/')) {
+                // Show loading state
+                const uploadArea = document.getElementById('uploadArea');
+                uploadArea.innerHTML = `
+                    <div class="upload-icon">⏳</div>
+                    <div class="upload-text">
+                        <strong>Analyzing your photo...</strong>
+                        <small>This takes just a moment</small>
+                    </div>
+                `;
+                
+                // Simulate AI analysis
+                setTimeout(() => {
+                    showAssessmentResults();
+                }, 2500);
+            }
+        }
+
+        function showAssessmentResults() {
+            const resultsDiv = document.getElementById('assessmentResults');
+            const resultsContent = document.getElementById('resultsContent');
+            
+            // Generate personalized recommendations
+            resultsContent.innerHTML = `
+                <div class="result-item">
+                    <div class="result-title">🎯 Recommended: Botox Treatment</div>
+                    <div class="result-description">Perfect for smoothing fine lines in your forehead and around the eyes. Results last 3-4 months.</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-title">✨ Consider: Dermal Fillers</div>
+                    <div class="result-description">Enhance your natural contours and restore volume for a youthful appearance.</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-title">💎 Enhance: Skin Rejuvenation</div>
+                    <div class="result-description">Our vitamin injection therapy can give you that healthy glow from within.</div>
+                </div>
+            `;
+            
+            resultsDiv.style.display = 'block';
+            
+            // Reset upload area for another photo
+            const uploadArea = document.getElementById('uploadArea');
+            uploadArea.innerHTML = `
+                <div class="upload-icon">📷</div>
+                <div class="upload-text">
+                    <strong>Upload another photo</strong>
+                    <small>for updated analysis</small>
+                </div>
+                <input type="file" id="photoUpload" accept="image/*" style="display: none;" onchange="handlePhotoUpload(event)">
+            `;
+        }
+
+        // Drag and drop functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const uploadArea = document.getElementById('uploadArea');
+            
+            if (uploadArea) {
+                uploadArea.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    uploadArea.classList.add('dragover');
+                });
+                
+                uploadArea.addEventListener('dragleave', () => {
+                    uploadArea.classList.remove('dragover');
+                });
+                
+                uploadArea.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    uploadArea.classList.remove('dragover');
+                    
+                    const files = e.dataTransfer.files;
+                    if (files.length > 0 && files[0].type.startsWith('image/')) {
+                        handlePhotoUpload({ target: { files: [files[0]] } });
+                    }
+                });
+            }
+        });
+
+        function sendChatMessage() {
+            const input = document.getElementById('chatWidgetInput');
+            const messages = document.getElementById('chatWidgetMessages');
+            const userMessage = input.value.trim();
+            
+            if (!userMessage) return;
+
+            // Add user message
+            messages.innerHTML += `
+                <div class="message user">
+                    <div class="message-avatar">You</div>
+                    <div class="message-content">${userMessage}</div>
+                </div>
+            `;
+
+            // Clear input
+            input.value = '';
+
+            // Simulate Virtual Assistant response
+            setTimeout(() => {
+                let response = aiResponses.default;
+                const lowerMessage = userMessage.toLowerCase();
+
+                if (lowerMessage.includes('botox') || lowerMessage.includes('wrinkle') || lowerMessage.includes('toxin')) {
+                    response = aiResponses.botox;
+                } else if (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much')) {
+                    response = aiResponses.pricing;
+                } else if (lowerMessage.includes('appointment') || lowerMessage.includes('schedule') || lowerMessage.includes('book')) {
+                    response = aiResponses.appointment;
+                } else if (lowerMessage.includes('contour') || lowerMessage.includes('fat') || lowerMessage.includes('body') || lowerMessage.includes('sculpt')) {
+                    response = aiResponses.contouring;
+                } else if (lowerMessage.includes('weight') || lowerMessage.includes('semaglutide') || lowerMessage.includes('ozempic')) {
+                    response = aiResponses.weight;
+                } else if (lowerMessage.includes('filler') || lowerMessage.includes('lips') || lowerMessage.includes('juvederm') || lowerMessage.includes('restylane')) {
+                    response = aiResponses.fillers;
+                } else if (lowerMessage.includes('photo') || lowerMessage.includes('assessment') || lowerMessage.includes('analyze')) {
+                    response = "Great! Click on the 'Assessment' tab above to upload your photo for a free personalized beauty analysis. I'll recommend the best treatments for your goals!";
+                }
+
+                messages.innerHTML += `
+                    <div class="message bot">
+                        <div class="message-avatar">BZ</div>
+                        <div class="message-content">${response}</div>
+                    </div>
+                `;
+
+                // Scroll to bottom
+                messages.scrollTop = messages.scrollHeight;
+            }, 1000);
+
+            // Scroll to bottom
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        function handleChatKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendChatMessage();
+            }
+        }
+
+        // Show notification after 5 seconds
+        setTimeout(() => {
+            const notification = document.getElementById('chatNotification');
+            if (notification && !chatOpen) {
+                notification.style.display = 'flex';
+            }
+        }, 5000);
+
+        // Virtual Assistant Chat Functionality (keeping existing responses)
+        const aiResponses = {
+            default: "I'd be happy to help you with that! Our treatments are customized for each client. Would you like to schedule a free consultation to discuss your specific needs?",
+            botox: "Our neurotoxin treatments start at $12 per unit for Botox and typically require 20-50 units depending on the area. Most clients see results within 3-7 days that last 3-4 months. Would you like to book a consultation?",
+            pricing: "Our pricing varies by treatment:\n• Botox: $12/unit\n• Dermal Fillers: From $650/syringe\n• Body Contouring: From $399/session\n• Semaglutide Program: $399/month\n• Vitamin Injections: From $35\n• IV Therapy: From $150\n\nWe also offer 0% financing! Would you like more details on a specific treatment?",
+            appointment: "I can help you schedule! We have openings this week. What treatment are you interested in, and what days work best for you?",
+            contouring: "Our body contouring combines Cryolipolysis (fat freezing), Ultrasonic Cavitation, and RF skin tightening. Most clients see results after 2-3 sessions. It's completely non-invasive with no downtime! We can target abs, love handles, arms, thighs, and more.",
+            weight: "Our medical weight loss program uses FDA-approved Semaglutide combined with B12 for energy and L-Carnitine for fat burning. Clients typically lose 15-20% of body weight. Includes weekly injections and virtual progress monitoring!",
+            fillers: "We offer Juvederm, Restylane, and RHA collections for lips, cheeks, and facial contouring. Results are immediate and last 6-18 months. Our injectors are artists who focus on natural-looking enhancement. Prices start at $650 per syringe."
+        };
+
+        function showBooking() {
+            alert('Booking system would open here!\n\nFor the actual site, this would integrate with your scheduling software to show available appointments in real-time.');
+        }
+
+        function showServiceDetail(service) {
+            const details = {
+                'contouring': 'Body Contouring details:\n• Cryolipolysis, Cavitation & RF\n• 6-8 sessions recommended\n• Results visible in 2-3 weeks\n• Before/after gallery\n• Financing available',
+                'botox': 'Botox & Neurotoxins:\n• Treats forehead, crow\'s feet, frown lines\n• Also for migraines, TMJ, excessive sweating\n• Results in 3-7 days\n• Membership programs available',
+                'semaglutide': 'Medical Weight Loss:\n• Weekly Semaglutide injections\n• Includes B12 and L-Carnitine\n• Virtual monitoring via app\n• Nutritional guidance included',
+                'fillers': 'Dermal Fillers:\n• Lips, cheeks, jawline, chin\n• Immediate results\n• Cannula technique available\n• Natural-looking enhancement',
+                'vitamins': 'Vitamin Injections:\n• B12, Vitamin D, Biotin\n• Beauty blend cocktails\n• Walk-ins welcome\n• Package deals available',
+                'iv': 'IV Therapy:\n• Myers Cocktail, NAD+, Glutathione\n• Hangover recovery\n• Athletic performance\n• Mobile service available'
+            };
+            
+            alert(`${details[service] || 'Service details'}\n\nThe full site would have a dedicated page with extensive information, FAQs, and booking options.`);
+        }
+
+        function playVideo() {
+            alert('Office Tour Video would play here!\n\nThis would show:\n• Welcoming reception area\n• State-of-the-art treatment rooms\n• Meeting with consultants\n• Happy clients\n• The treatment experience\n\nCreating trust and familiarity before they visit.');
+        }
+
+        // Video playlist handling - start with video2 if video1 has issues
+        const videoPlaylist = [
+            './video2.mp4',  // Start with video2 since it works
+            './video3.mp4',
+            './video1.mp4'   // Try video1 last
+        ];
+        let currentVideoIndex = 0;
+        let videoInitialized = false;
+        let failedVideos = [];
+
+        function playVideos() {
+            const video = document.getElementById('heroVideo');
+            const placeholder = document.getElementById('videoPlaceholder');
+            
+            if (video) {
+                video.src = videoPlaylist[0];
+                video.play().then(() => {
+                    console.log('Video playing successfully');
+                    if (placeholder) {
+                        placeholder.style.opacity = '0';
+                        setTimeout(() => {
+                            placeholder.style.display = 'none';
+                        }, 500);
+                    }
+                }).catch(error => {
+                    console.error('Error playing video:', error);
+                });
+            }
+        }
+
+        function tryNextVideo() {
+            const video = document.getElementById('heroVideo');
+            if (currentVideoIndex < videoPlaylist.length - 1) {
+                currentVideoIndex++;
+                console.log('Trying next video:', videoPlaylist[currentVideoIndex]);
+                video.src = videoPlaylist[currentVideoIndex];
+                video.load();
+                video.play().catch(err => {
+                    console.log('Failed to play:', videoPlaylist[currentVideoIndex]);
+                    tryNextVideo(); // Try next video if this one fails
+                });
+            }
+        }
+
+        // Add video handling
+        window.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('heroVideo');
+            const placeholder = document.getElementById('videoPlaceholder');
+            
+            console.log('Page loaded, attempting to play video...');
+            
+            if (video) {
+                // Set initial video source
+                video.src = videoPlaylist[0];
+                
+                // Force video to fill container properly
+                video.style.width = '100%';
+                video.style.height = '100%';
+                video.style.objectFit = 'cover';
+                
+                // Try multiple approaches to load video
+                video.addEventListener('canplay', function() {
+                    console.log('Video can play:', video.src);
+                    if (!videoInitialized) {
+                        videoInitialized = true;
+                        video.play().catch(err => {
+                            console.log('Autoplay blocked, showing play button');
+                        });
+                    }
+                });
+
+                // Set up video cycling for multiple videos
+                video.addEventListener('ended', function() {
+                    currentVideoIndex = (currentVideoIndex + 1) % videoPlaylist.length;
+                    // Skip failed videos
+                    while (failedVideos.includes(videoPlaylist[currentVideoIndex]) && failedVideos.length < videoPlaylist.length) {
+                        currentVideoIndex = (currentVideoIndex + 1) % videoPlaylist.length;
+                    }
+                    video.src = videoPlaylist[currentVideoIndex];
+                    video.load();
+                    video.play();
+                });
+
+                // Hide placeholder when video starts playing
+                video.addEventListener('playing', function() {
+                    console.log('Video is playing');
+                    if (placeholder) {
+                        placeholder.style.opacity = '0';
+                        placeholder.style.transition = 'opacity 0.5s';
+                        setTimeout(() => {
+                            placeholder.style.display = 'none';
+                        }, 500);
+                    }
+                });
+
+                // Handle video errors - try next video
+                video.addEventListener('error', function(e) {
+                    console.error('Video error for:', video.src);
+                    failedVideos.push(video.src);
+                    
+                    // Try the next video in the playlist
+                    if (failedVideos.length < videoPlaylist.length) {
+                        tryNextVideo();
+                    } else {
+                        // All videos failed, show placeholder
+                        if (placeholder) {
+                            placeholder.style.opacity = '1';
+                            placeholder.innerHTML = `
+                                <div class="placeholder-content">
+                                    <div class="placeholder-text">Beauty Zensation</div>
+                                    <div class="placeholder-subtitle">Miami's Premier Medical Aesthetics</div>
+                                </div>
+                            `;
+                        }
+                    }
+                });
+
+                // Handle metadata load to ensure proper sizing
+                video.addEventListener('loadedmetadata', function() {
+                    console.log('Video dimensions:', video.videoWidth, 'x', video.videoHeight);
+                    // Force resize to container
+                    video.style.width = '100%';
+                    video.style.height = '100%';
+                });
+
+                // Try to load and play
+                video.load();
+                
+                // Attempt autoplay after a short delay
+                setTimeout(() => {
+                    video.play().catch(err => {
+                        console.log('Autoplay prevented, trying next video');
+                        tryNextVideo();
+                    });
+                }, 100);
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
