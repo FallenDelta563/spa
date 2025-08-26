@@ -2406,14 +2406,14 @@ function updateNavigation(showingAbout) {
         navLinks.innerHTML = `
             <li><a href="#" onclick="showHome()">Home</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#about" onclick="showAbout()" style="color: var(--primary);">About</a></li>
+            <li><a href="#about" class="btn-disabled" style="color: var(--primary);">About</a></li>
             <li><a href="#testimonials">Reviews</a></li>
             <li><a href="#contact" class="btn-disabled">Contact</a></li>
         `;
     } else {
         navLinks.innerHTML = `
             <li><a href="#services">Services</a></li>
-            <li><a href="#about" onclick="showAbout()">About</a></li>
+            <li><a href="#about" class="btn-disabled">About</a></li>
             <li><a href="#testimonials">Reviews</a></li>
             <li><a href="#contact" class="btn-disabled">Contact</a></li>
         `;
